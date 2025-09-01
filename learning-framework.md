@@ -21,3 +21,14 @@ Why this component exists, what problems it solves.
 
 ## 🔑 Key Takeaways
 - Quick summary bullets
+
+---
+
+## Daily (30–60 min):
+- Study 1 concept.
+- Make notes (purpose, how it works, trade-offs, examples).
+- Draw 1 diagram.
+
+## Weekly (2–3 hrs):
+- Work on the mini project.
+- Summarize everything learned that week into 1–2 pages of notes.

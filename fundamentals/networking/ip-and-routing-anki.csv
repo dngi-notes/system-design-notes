@@ -1,0 +1,42 @@
+Front|Back
+What is an IP Address?|A unique identifier for devices on a network.
+What are the two main types of IP addresses?|IPv4 (32-bit, ~4.3B addresses) and IPv6 (128-bit, practically unlimited).
+Example of an IPv4 address?|`192.168.1.1`
+Example of an IPv6 address?|`2001:db8::1`
+Structure of IPv4 address?|Four octets (A.B.C.D), each 8 bits.
+Structure of IPv6 address?|Hexadecimal, separated by colons (`:`), e.g., `fe80::1`
+What are the private IPv4 address ranges?|`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`
+What is the difference between private and public IP addresses?|Private: used in internal networks, not routable on the internet.<br>Public: globally unique and routable.
+What is the loopback IP address and its purpose?|`127.0.0.1` (localhost), used for self-communication.
+What is the IPv4 link-local range?|`169.254.0.0/16`, auto-assigned for local communication.
+What are multicast/broadcast addresses used for?|One-to-many communication.
+What does CIDR define?|Subnets using prefix length (e.g., `/24`, `/16`).
+How many usable IPs are in `192.168.1.0/24`?|254 usable (256 total).
+Why is CIDR important?|Scalability, segmentation, and efficient routing.
+What is routing?|Deciding where packets go.
+What is direct routing?|Source and destination are on the same subnet (no router needed).
+What is static routing?|Admin-configured routes; simple but not scalable.
+What is dynamic routing?|Routers exchange routes automatically.
+Examples of Interior Gateway Protocols (IGPs)?|RIP (obsolete), OSPF (link-state, hierarchical), EIGRP (Cisco).
+Example of an Exterior Gateway Protocol (EGP)?|BGP — the backbone of the internet.
+What is a default gateway?|Router that forwards traffic outside the local subnet.
+What is a routing table?|A mapping of destination networks to next hops.
+What is the longest prefix match?|Router chooses the most specific subnet route.
+What is NAT (Network Address Translation)?|Maps private IPs to public IPs.
+What is SNAT used for?|Source NAT → outbound traffic.
+What is DNAT used for?|Destination NAT → inbound traffic.
+What is PAT?|Port Address Translation, maps multiple private IPs to one public IP (e.g., home routers).
+Difference between L4 and L7 load balancers?|L4: IP + port based.<br>L7: Application-aware (e.g., HTTP headers).
+Example use of private subnets in system design?|Database servers not exposed to the internet.
+Example use of public subnets in system design?|APIs, application frontends.
+What is a VPC (Virtual Private Cloud)?|Isolated network environment in cloud providers (AWS/Azure/GCP).
+What are VPNs/peering used for?|Connecting private networks securely.
+Challenges in IP-based system design?|Scaling subnets, routing complexity, latency, security, multi-tenancy.
+What is Anycast IP?|Same IP advertised from multiple locations; requests routed to the nearest instance (used in CDNs, DNS).
+What are overlay networks?|Software-defined routing over physical networks (e.g., Kubernetes CNI, service meshes).
+What is service discovery?|Using DNS, load balancers, or meshes instead of static IPs.
+Why use CIDR carefully?|For scalability and subnet planning.
+Why separate public and private subnets?|Security and proper exposure.
+Why use NAT gateways?|For outbound-only services.
+Security best practice in routing?|Firewalls and least privilege access.
+How to plan for global services?|Use Anycast, DNS load balancing, BGP-aware routing, and local optimizations.

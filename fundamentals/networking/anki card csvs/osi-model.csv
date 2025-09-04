@@ -1,0 +1,18 @@
+Front|Back
+What is the purpose of the OSI model?|To provide a standard for people developing interconnected systems.
+How many layers does the OSI model have and how are they organized?|It has 7 layers, abstracted in increasing closeness to the end user (7 = closest, 1 = furthest).
+What is a Protocol Data Unit (PDU) in the OSI model?|The specific name for the data format at each layer of the OSI model.
+What is the layer number, PDU, and function of the Application layer?|Layer 7, PDU: Data, Function: High level protocols such as resource sharing/remote file access (e.g. HTTP, gRPC).
+What is the layer number, PDU, and function of the Presentation layer?|Layer 6, PDU: Data, Function: Translation of data between a networking service and an application, including character encoding, data compression, and encryption/decryption.
+What is the layer number, PDU, and function of the Session layer?|Layer 5, PDU: Data, Function: Managing communication sessions (continuous information exchange in the form of multiple back-and-forth transmissions between two nodes).
+What is the layer number, PDU, and function of the Transport layer?|Layer 4, PDU: Segment/Datagram, Function: Transmission of data segments between points on a network, including segmentation, acknowledgement, and multiplexing (TCP vs UDP).
+What is the layer number, PDU, and function of the Network layer?|Layer 3, PDU: Packet, Function: Structuring and managing a multi-node network, including addressing (IP), routing, and traffic control.
+What is the layer number, PDU, and function of the Data Link layer?|Layer 2, PDU: Frame, Function: Transmission of data frames between two nodes connected by a physical layer (e.g. Ethernet, Wi-Fi).
+What is the layer number, PDU, and function of the Physical layer?|Layer 1, PDU: Bit, Function: Transmission and reception of raw bit streams over a physical medium.
+Which OSI layer is responsible for high level protocols such as HTTP and gRPC?|Application layer (Layer 7), PDU: Data
+Which OSI layer is responsible for translation, compression, and encryption/decryption?|Presentation layer (Layer 6), PDU: Data
+Which OSI layer manages communication sessions (multiple back-and-forth transmissions)?|Session layer (Layer 5), PDU: Data
+Which OSI layer handles segmentation, acknowledgement, and multiplexing (TCP vs UDP)?|Transport layer (Layer 4), PDU: Segment/Datagram
+Which OSI layer handles addressing, routing, and traffic control using IP?|Network layer (Layer 3), PDU: Packet
+Which OSI layer handles transmission of frames between nodes (Ethernet, Wi-Fi)?|Data Link layer (Layer 2), PDU: Frame
+Which OSI layer handles transmission and reception of raw bit streams over a medium?|Physical layer (Layer 1), PDU: Bit

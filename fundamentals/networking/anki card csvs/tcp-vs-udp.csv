@@ -1,0 +1,29 @@
+Front|Back
+What does TCP stand for?|Transmission Control Protocol
+What does UDP stand for?|User Datagram Protocol
+Is TCP connection-oriented or connectionless?|Connection-oriented; requires a handshake before communication.
+Is UDP connection-oriented or connectionless?|Connectionless; no handshake.
+What makes TCP reliable?|It guarantees packet delivery, order, and error checking.
+What makes UDP unreliable?|It does not guarantee delivery, order, or duplicate suppression.
+What control mechanisms does TCP provide that UDP does not?|Flow control and congestion control.
+Which protocol has heavier overhead: TCP or UDP?|TCP, due to metadata and state tracking.
+Which protocol is faster: TCP or UDP?|UDP, because it has lower latency and minimal checks.
+What are common use cases for TCP?|Web browsing (HTTP/HTTPS), file transfer (FTP), email (SMTP/IMAP), remote access (SSH).
+What are common use cases for UDP?|Realtime apps (VoIP, video streaming, gaming), DNS lookups, DHCP.
+How does the TCP handshake work?|It uses a 3-way handshake: SYN → SYN-ACK → ACK before data transfer.
+Why does UDP have lower latency than TCP?|It skips the handshake and reliability mechanisms.
+How does TCP handle packet ordering?|It ensures ordered delivery; packets are assembled in sequence.
+How does UDP handle packet ordering?|It does not; packets may arrive out of order, be duplicated, or lost.
+What is "head-of-line blocking" and which protocol suffers from it?|In TCP, if one packet is lost, others wait until it is retransmitted.
+How does UDP avoid head-of-line blocking?|Packets are independent, but ordering and retries must be handled in the application layer.
+How can TCP and UDP be secured?|TCP: TLS | UDP: DTLS or QUIC.
+What is QUIC and why is it important?|A protocol built on UDP (used in HTTP/3) that adds reliability and encryption for speed.
+When should you choose TCP in system design?|When correctness, ordering, and completeness matter more than latency (e.g. financial transactions, APIs).
+When should you choose UDP in system design?|When low latency matters more than perfect delivery (e.g. streaming, gaming, live calls).
+Why do some modern protocols use UDP instead of TCP?|They add reliability at higher levels (e.g. QUIC/HTTP3) for faster performance.
+Why might UDP be chosen for service discovery in distributed systems?|It is lightweight and suitable for simple, fast communication.
+Which protocol ensures packet reliability, TCP or UDP?|TCP
+Which protocol is better for real-time communication like video calls?|UDP
+Which protocol is better for file transfer or financial transactions?|TCP
+Which protocol can cause higher latency due to head-of-line blocking?|TCP
+Which protocol is commonly used in DNS lookups?|UDP

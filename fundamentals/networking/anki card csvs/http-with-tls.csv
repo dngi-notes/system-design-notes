@@ -1,0 +1,36 @@
+What is HTTP?|Application layer protocol for communication on the web
+What is TLS?|Cryptographic protocol that provides confidentiality, integrity, and authentication for data in transit
+What is HTTPS?|HTTP + TLS → Secures HTTP traffic over TCP using TLS
+What does TLS provide for confidentiality?|Encrypts requests/responses (e.g. login details, session cookies)
+What does TLS provide for integrity?|Prevents data tampering during transit
+How does TLS provide authentication?|Server (and optionally client) proves identity via digital certificates
+How does TLS impact user trust?|HTTPS adoption improves UX and search ranking
+Why is TLS required for compliance?|Required for standards like PCI-DSS, GDPR, HIPAA
+Step 1 of HTTPS request lifecycle?|TCP handshake (establishes connection)
+Step 2 of HTTPS request lifecycle?|TLS handshake (ClientHello → ServerHello → Key exchange → optional client auth)
+Step 3 of HTTPS request lifecycle?|Secure data transfer → all HTTP messages encrypted
+What is sent in ClientHello?|Supported TLS versions and ciphers
+What is sent in ServerHello?|Selected cipher and server certificate
+What happens during TLS key exchange?|Session keys are derived
+What is optional in TLS handshake?|Client authentication
+Why does TLS affect performance?|TLS handshake adds extra RTT overhead
+What mitigates TLS handshake overhead?|Session resumption (IDs/tickets)|HTTP/2 or HTTP/3|TLS 1.3|hardware acceleration
+What challenge does TLS pose for scalability?|Certificates must be distributed across multiple servers
+How can certificate management be centralized?|Using Let's Encrypt + ACME
+Where is TLS usually terminated for scalability?|Load balancers or reverse proxies
+What ensures forward secrecy in TLS?|Ephemeral Diffie-Hellman
+What reduces MITM risk in TLS?|Certificate pinning
+Why use strong cipher suites?|To enhance security and support automatic certificate renewal
+How should private keys be stored?|In HSMs or secure vaults
+What is TLS termination at edge?|TLS ends at a load balancer/proxy/CDN|internal traffic may be plain HTTP
+What is the tradeoff of TLS termination at edge?|Better performance vs weaker internal security
+What is end-to-end TLS?|TLS from client to backend services|higher security but more computational cost
+What is mTLS (Mutual TLS)?|Both client and server present certificates|used in microservices and zero-trust architectures
+What is the performance vs security tradeoff with TLS?|Terminate at edge for performance|end-to-end TLS for sensitive environments
+What is the complexity vs usability tradeoff with TLS?|mTLS adds strong authentication but complicates certificate management
+What is the cost vs scale tradeoff with TLS?|TLS offloading appliances/CDNs reduce CPU load but increase infrastructure cost
+How is TLS typically applied in web applications?|TLS termination at load balancer|internal HTTP
+How is TLS typically applied in APIs?|HTTPS + OAuth/JWT|often with mTLS for B2B integrations
+How is TLS managed in microservices?|Service mesh (e.g. Istio, Linkerd) handles TLS transparently
+How is TLS applied in mobile/IoT?|TLS with certificate pinning to prevent fake CA attacks
+What is the key takeaway about TLS in system design?|TLS transforms HTTP into HTTPS|choice of termination, end-to-end, or mTLS depends on security requirements, performance goals, and complexity

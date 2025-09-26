@@ -50,4 +50,5 @@ When data grows too large for a single server, **partitioning** (splitting data 
 - **Cassandra &rightarrow; distributes data using consistent hashing**
 
 ## Diagram
-`diagram of orizontal sharing by post_id`
+`diagram of horizontal sharing by post_id`
+![sharding example](sharding-example.png)

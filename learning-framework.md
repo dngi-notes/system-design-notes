@@ -1,4 +1,4 @@
-# title e.g. (Databases)
+# title
 
 ## 📌 Purpose
 Why this component exists, what problems it solves.
